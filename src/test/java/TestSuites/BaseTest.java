@@ -12,12 +12,13 @@ public class BaseTest {
     protected WebDriver driver;
     public String baseURL = "https://tax.simplebooks.com/login";
 
+    //Set up the WebDriverManager to manage the ChromeDriver
     @BeforeClass
     public void setUp(){
         WebDriverManager.chromedriver().setup();
     }
 
-
+    //initialize the WebDriver, maximizes the window, and navigates to the base URL
     @BeforeMethod
     public void beforeMethod(){
         driver = new ChromeDriver();
@@ -25,6 +26,7 @@ public class BaseTest {
         driver.get(baseURL);
     }
 
+    //Quit the WebDriver instance to close the browser
     @AfterMethod
     public void quit(){
         driver.quit();

@@ -10,7 +10,6 @@ import java.time.Duration;
 
 public class LoginTests extends BaseTest{
 
-
     @Test
     //Enter the credentials and submit login
     public void testVerifySuccessfulLogin(){
